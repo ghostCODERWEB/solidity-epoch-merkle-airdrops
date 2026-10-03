@@ -1,0 +1,11 @@
+{
+  "name": "solidity-epoch-merkle-airdrops",
+  "title": "Epoch Merkle distribution",
+  "contract": "EpochDistributor",
+  "description": "Independently funded ERC20 distribution epochs with double-hashed leaves and per-index replay protection.",
+  "args": [
+    "$TOKEN",
+    "$ADMIN"
+  ],
+  "assumptions": "Open epoch creation uses funder-owned budgets. Leaves include epoch and index and use OpenZeppelin-compatible double hashing; internal Merkle pairs are sorted. Root publishers must construct unique valid allocations. Claims stop at the deadline; only the funder can reclaim the remainder."
+}
